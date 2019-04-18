@@ -1,20 +1,27 @@
 {
     "name": "MultiLinkOpen",
     "description": "Chrome App for opening links by keyword",
-    "version": "0.1",
+    "version": "0.2",
     "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "common.js",
+            "background.js"
+        ]
+    },
     "browser_action": {
-        "default_icon": "calculator-16.png",
+        "default_icon": "icon-16.png",
         "default_title": "Multi Link Open",
         "default_popup": "popup.html"
     },
     "permissions": [
         "storage",
-        "activeTab"
+        "activeTab",
+        "contextMenus"
     ],
     "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
     "icons": {
-        "16": "calculator-16.png",
+        "16": "icon-16.png",
         "128": "calculator-128.png"
     }
 }
